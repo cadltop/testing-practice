@@ -1,5 +1,8 @@
-import { capitalize } from "./main";
+import * as main from "./main";
 
 test('capitalize strings', () => {
-    expect(capitalize('lower')).toBe('LOWER');
+    expect(main.capitalize('upper')).toBe('UPPER');
+});
+test('reverse strings', () => {
+    expect(main.reverseString('reverse')).toBe('esrever');
 });
