@@ -45,3 +45,18 @@ export function caesarCipher(value, factor) {
     }
     return newString.join("");
 }
+export function analyzeArray(arr) {
+    const object = {
+        average: 0,
+        min: arr[0],
+        max: arr[0],
+        length: arr.length
+    };
+    for (const num of arr) {
+        if (num > object.max) object.max = num;
+        if (num < object.min) object.min = num;
+        object.average += num;
+    }
+    object.average /= object.length;
+    return object;
+}
